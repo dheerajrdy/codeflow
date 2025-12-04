@@ -1,0 +1,8 @@
+# Exclude detailed message logs (used for verification only)
+results/baseline_messages.json
+results/isolation_messages.json
+results/compaction_messages.json
+
+# Keep the visualizations and comparison data
+!results/comparison_data.json
+!results/*.png

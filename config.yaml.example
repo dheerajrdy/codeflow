@@ -1,0 +1,37 @@
+# CodeFlow Configuration Example
+# Copy this to config.yaml and customize for your environment
+
+# Jira settings
+jira:
+  base_url: "https://your-company.atlassian.net"
+  project_key: "PROJ"
+  # API token loaded from JIRA_API_TOKEN env var
+
+# GitHub settings
+github:
+  org: "your-org"
+  repo: "your-repo"
+  repo_url: "https://github.com/your-org/your-repo"
+  default_branch: "main"
+  # Token loaded from GITHUB_TOKEN env var
+
+# Test configuration
+test:
+  command: "pytest"  # or "npm test", "make test", etc.
+
+# Model configuration
+model:
+  provider: "google"  # Using Google Cloud Agent Development Kit
+  model_name: "gemini-2.5-flash"  # or "gemini-pro"
+  temperature: 0.7
+  max_tokens: 2048
+
+# Workflow behavior
+workflow:
+  max_retries: 1  # Number of retries for Coding/Test/Review loop
+  runs_dir: "runs"  # Directory for storing workflow run metadata
+  auto_confirm: false  # Set to true to skip interactive prompts (or use --yes flag)
+
+# Repository defaults
+repo_path: "."  # Path to repository (can be overridden by REPO_PATH env var)
+main_language: "Python"  # Default language if not detected

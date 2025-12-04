@@ -1,0 +1,40 @@
+# Development outputs
+examples/evaluation_results.csv
+examples/evaluation_results.png
+*.DS_Store
+OTEL_DESIGN.md
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+.pytest_cache/
+.mypy_cache/
+
+# Node modules (webui)
+src/picoagents/webui/frontend/node_modules/
+src/picoagents/webui/frontend/.env.local
+src/picoagents/webui/frontend/.env.production
+src/picoagents/webui/frontend/dist/
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# Environment files
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# Distribution
+*.egg
+MANIFEST
+
+# Design documents (internal planning)
+docs/MEMORY_TOOL_DESIGN.md
