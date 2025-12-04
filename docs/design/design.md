@@ -756,29 +756,3 @@ Instead, you get:
 That matches your stated priority: learning experience first, product polish later.
 
 ⸻
-
-3. How to think about this as a learning exercise
-
-You’re basically doing a “minimal but real” slice through the playbook:
-	•	✅ Use:
-	•	Multi-agent roles and when they help.
-	•	Explicit workflow orchestration.
-	•	Model abstraction + tools.
-	•	Simple evaluation & observability.
-	•	Basic UX principles (control + visibility).
-	•	❌ Skip for now:
-	•	Autonomous swarms / group chat.
-	•	Complex memory + RAG.
-	•	DAG/parallel/checkpointed workflows.
-	•	Computer-use agents.
-	•	Product-scale UX & metrics frameworks.
-
-As you go through the 6 days, a good meta-practice:
-after each run, ask yourself:
-
-“Is this painful enough that I need to pull another concept from the book (e.g., more memory, different orchestration, another agent)?”
-
-If yes → we selectively pull in one new concept and apply it.
-If no → we enjoy the simplicity.
-
-Noes: reference contains picoagents, this for you to lookup code and design patterns, for ref only. Implement everything using Google GCP and Google agent dev kit.
