@@ -65,39 +65,6 @@ pytest tests/ -v
 # With coverage
 pytest tests/ --cov=src --cov-report=term-missing
 ```
-
-## Project Status
-
-**Current Phase: Day 6 (Evaluation harness & examples)**
-
-- [x] Project scaffolding and structure
-- [x] Workflow engine with sequential step execution
-- [x] CLI entrypoint
-- [x] Stubbed workflow steps
-- [x] Basic tests
-- [x] **Model & agent interfaces (Day 2)**
-  - [x] ModelClient abstraction
-  - [x] Google Gemini client implementation
-  - [x] Design Agent with prompt templates
-  - [x] Review Agent with prompt templates
-- [x] **Day 3 additions**
-  - [x] Coding Agent that produces real patches/diffs
-  - [x] Jira client for ticket fetching (stub-friendly)
-  - [x] GitHub client for branch/PR creation (dry-run friendly)
-  - [x] CLI/demo wiring for end-to-end flow
-- [x] **Day 4 additions**
-  - [x] Notes/Metadata Agent
-  - [x] Run persistence to `runs/` with logs
-  - [x] CLI commands to list/show past runs
-- [x] **Day 5 additions**
-  - [x] Guardrails for git/PR actions (prompts with `--yes` override)
-  - [x] Retry loop for Coding/Test/Review (configurable `max_retries`)
-  - [x] Config loading from `config.yaml`
-  - [x] Better CLI UX for run listing/showing
-- [x] **Day 6 additions**
-  - [x] Evaluation harness to run multiple tickets and capture metrics
-  - [x] Day 6 evaluation demo script
-
 ## Architecture
 
 CodeFlow uses a workflow-based orchestration pattern with specialized agents:
@@ -107,7 +74,6 @@ CodeFlow uses a workflow-based orchestration pattern with specialized agents:
 - **Review Agent**: Evaluates changes against acceptance criteria
 - **Notes Agent**: Captures learnings and metadata
 
-See [CLAUDE.md](CLAUDE.md) for detailed architecture and development guidance.
 
 ## Development
 
@@ -180,26 +146,5 @@ Environment variables supported (override config.yaml):
 - `GITHUB_REPO`, `GITHUB_TOKEN`, `GITHUB_DEFAULT_BRANCH`
 - `REPO_PATH`, `TEST_COMMAND`
 - `CODEFLOW_CONFIG` (custom config path), `CODEFLOW_AUTO_CONFIRM` (`true` to skip prompts)
-
-## Documentation
-
-- [CLAUDE.md](CLAUDE.md) - Guidance for Claude Code when working on this project
-- [docs/design/design.md](docs/design/design.md) - Complete design document with 6-day plan
-- [docs/design/reference/](docs/design/reference/) - Reference implementations (PicoAgents)
-
-## License
-
-This is a learning project following the design principles from "Designing Multi-Agent Systems" by Victor Dibia.
-
-## Implementation Notes
-
-This project is being built over 6 days following a structured plan:
-
-1. **Day 1 ✓**: Scaffolding & workflow runner stub
-2. **Day 2**: Model & agent interfaces
-3. **Day 3**: Coding Agent + Jira/GitHub integration
-4. **Day 4**: Notes Agent + observability
-5. **Day 5**: Guardrails & UX polish
-6. **Day 6**: Evaluation harness & examples
 
 See [docs/design/design.md](docs/design/design.md) for the complete implementation plan.
